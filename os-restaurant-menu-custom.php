@@ -4,18 +4,18 @@ add_action( 'init', 'create_dish_post_types' );
 function create_dish_post_types()
 {
 	$args = array(
-					'label' 	=> 'Food Menu Dish',
+					'label' 	=> 'Dishes',
 					'labels' 	=> array(
-											'name' 	=> _x('Food Menu', 'custom post type name'),
-											'singular_name' => _x('Food Menu', 'custom post type name'),
-											'add_new_item'	=> __('Add Dish'),
+											'name' 	=> _x('Dishes', 'custom post type name'),
+											'singular_name' => _x('Dishes', 'custom post type name'),
+											'add_new_item'	=> 'Add New Dish',
 											'edit_item'		=> __('Edit Dish'),
 											'new_item'		=> __('New Dish'),
 											'view_item'		=> __('View Dish'),
 											'search_items'	=> __('Search Dishes'),
 											'not_found'		=> __('No Dishes found'),
 											'not_found_in_trash' => __('No Dishes found in Trash'),
-											'menu_name'		=> __('Food Menu'),
+											'menu_name'		=> __('Dishes'),
 											),
 					'public'	=> true,
 					'supports'	=> array('title', 'editor', 'thumbnail'),
@@ -76,14 +76,14 @@ function create_dish_taxonomies()
 					'name' 			=> _x( 'Courses', 'taxonomy general name' ),
 					'singular_name' => _x( 'Course', 'taxonomy singular name' ),
 					'search_items' 	=>  __( 'Search Courses' ),
-					'all_items' 	=> __( 'All Coursess' ),
+					'all_items' 	=> __( 'All Courses' ),
 					'parent_item' 	=> __( 'Parent Course' ),
 					'parent_item_colon' => __( 'Parent Course:' ),
 					'edit_item' 	=> __( 'Edit Course' ), 
 					'update_item' 	=> __( 'Update Course' ),
 					'add_new_item' 	=> __( 'Add New Course' ),
 					'new_item_name' => __( 'New Course Name' ),
-					'menu_name' 	=> __( 'Course' ),
+					'menu_name' 	=> __( 'Courses' ),
 	);
 	
 	register_taxonomy('course', array('dish'), array(

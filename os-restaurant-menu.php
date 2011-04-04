@@ -21,6 +21,9 @@ require_once("os-restaurant-menu-layouts.php");
 /* Include shortcodes */
 require_once("os-restaurant-menu-shortcodes.php");
 
+/* Create InsertDish button in TinyMCE (WYSIWYG) editor  */
+require_once("os-restaurant-menu-mce-button.php");
+
 /* Add defaul stylesheet for Dishes*/
 add_action('wp_print_styles', 'add_dish_styles');
 function add_dish_styles()
