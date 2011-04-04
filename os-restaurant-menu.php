@@ -1,9 +1,9 @@
 <?php 
 /*
 Plugin Name: Restaurant Menu
-Plugin URI: http://octaviansolutions
+Plugin URI: http://www.octaviansolutions.co.uk/
 Description: Plugin allows to add restaurant menu
-Version: 1.1
+Version: 1.2
 Author: Oksamyta
 Author URI: http://sev-scs.com.ua
 License: 
