@@ -1,47 +1,47 @@
 <?php 
 /*
-Plugin Name: Restaurant Menu
+Plugin Name: Food Menu Plugin
 Plugin URI: http://www.octaviansolutions.co.uk/
 Description: Plugin allows to add restaurant menu
-Version: 1.2
+Version: 1.3
 Author: Oksamyta
 Author URI: http://sev-scs.com.ua
 License: 
 */
 
 /* Install and activate postMash plugin */
-require_once("os-restaurant-menu-postmash.php");
+require_once("food-menu-plugin-postmash.php");
 
 /* Include custom post type and taxonomies */
-require_once("os-restaurant-menu-custom.php");
+require_once("food-menu-plugin-custom.php");
 
 /* Include front-end layouts */
-require_once("os-restaurant-menu-layouts.php");
+require_once("food-menu-plugin-layouts.php");
 
 /* Include shortcodes */
-require_once("os-restaurant-menu-shortcodes.php");
+require_once("food-menu-plugin-shortcodes.php");
 
 /* Create InsertDish button in TinyMCE (WYSIWYG) editor  */
-require_once("os-restaurant-menu-mce-button.php");
+require_once("food-menu-plugin-mce-button.php");
 
 /* Add defaul stylesheet for Dishes*/
 add_action('wp_print_styles', 'add_dish_styles');
 function add_dish_styles()
 {
-	wp_register_style('dish_style', WP_PLUGIN_URL.'/os-restaurant-menu/dish_style.css');
+	wp_register_style('dish_style', WP_PLUGIN_URL.'/food-menu-plugin/dish_style.css');
 	wp_enqueue_style('dish_style');
 }
 
 /* Add plugin information page */
-add_action('admin_menu', 'os_rstaurant_menu_info');
-function os_rstaurant_menu_info()
+add_action('admin_menu', 'food_menu_plugin_info_page');
+function food_menu_plugin_info_page()
 {
 	// add page to Settings menu block
-	add_submenu_page('edit.php?post_type=dish', 'Restaurant Menu Info', 'Dashboard', 'administrator', 'os-restaurant-menu-info', 'os_restaurant_menu_info');
+	add_submenu_page('edit.php?post_type=dish', 'Restaurant Menu Info', 'Dashboard', 'administrator', 'food-menu-plugin-info', 'food_menu_plugin_info');
 }
 
 /* Show information page of Restaurant Menu plugin */
-function os_restaurant_menu_info()
+function food_menu_plugin_info()
 {?>
 	<div class="wrap">
     	<h2>Restaurant Menu Info</h2>
@@ -51,12 +51,12 @@ function os_restaurant_menu_info()
         <br  /><br />
         Support Link
         <div style="clear:both;"></div>
-        <?php show_os_restaurant_menu_feed() ?>
+        <?php show_food_menu_plugin_feed() ?>
     </div>
 <?php }
 
 // get RSS Feed Data
-function get_os_restaurant_menu_feed()
+function get_food_menu_plugin_feed()
 {
 	$items = array();
 	if(function_exists('fetch_feed')) 
@@ -72,9 +72,9 @@ function get_os_restaurant_menu_feed()
 }
 
 // Show Rss Feed
-function show_os_restaurant_menu_feed()
+function show_food_menu_plugin_feed()
 {
-	$items = get_os_restaurant_menu_feed();?>
+	$items = get_food_menu_plugin_feed();?>
 	
     <div class="postbox " id="dashboard_primary" style="margin-top:20px;">
 	<h3 style="margin:0; padding:5px;"><span>Octavian Solutions Feed</span></h3>

@@ -34,6 +34,9 @@ No screenshots available at the moment
 
 == Changelog ==
 
+= 1.3 =
+Plugin name changed to Food Menu Plugin
+
 = 1.2 =
 Plugin URL changed
 
@@ -44,6 +47,9 @@ Shortcode button added to WYSIWYG editor
 Only version
 
 == Upgrade Notice ==
+
+= 1.3 =
+Plugin name changed to Food Menu Plugin
 
 = 1.2 =
 Plugin URL changed

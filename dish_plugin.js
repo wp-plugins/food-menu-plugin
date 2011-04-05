@@ -9,7 +9,7 @@
 				// creates the button
 				var button = controlManager.createButton('dish_button', {
 					title : 'Dish Shortcode', // title of the button
-					image : userSettings['url'] + 'wp-content/plugins/os-restaurant-menu/icon-dish.gif',  // path to the button's image
+					image : userSettings['url'] + 'wp-content/plugins/food-menu-plugin/icon-dish.gif',  // path to the button's image
 					onclick : function() {
 						// triggers the thickbox
 						var width = jQuery(window).width(), H = jQuery(window).height(), W = ( 720 < width ) ? 720 : width;

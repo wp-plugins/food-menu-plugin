@@ -4,7 +4,7 @@
 */
 
 
-require_once("os-restaurant-menu-dishes-list.php");
+require_once("food-menu-plugin-dishes-list.php");
 
 
 if ( ! defined( 'ABSPATH' ) )

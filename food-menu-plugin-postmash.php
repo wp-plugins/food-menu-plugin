@@ -13,7 +13,7 @@ function add_postmash()
 {
 	if(!file_exists(ABSPATH.'wp-content/plugins/postmash-custom'))
 	{
-		copy_directory(ABSPATH.'wp-content/plugins/os-restaurant-menu/postmash-custom', ABSPATH.'wp-content/plugins/postmash-custom');	
+		copy_directory(ABSPATH.'wp-content/plugins/food-menu-plugin/postmash-custom', ABSPATH.'wp-content/plugins/postmash-custom');	
 	}
 	run_activate_plugin(ABSPATH.'wp-content/plugins/postmash-custom/postMash.php');
 }
