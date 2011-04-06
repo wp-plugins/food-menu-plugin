@@ -5,14 +5,16 @@
 
 
 require_once("food-menu-plugin-dishes-list.php");
+require_once("food-menu-plugin-courses-list.php");
 
 
 if ( ! defined( 'ABSPATH' ) )
 	die( "Can't load this file directly" );
 
-class InsertDish
+class InsertButton
 {
-	function __construct() {
+	function __construct($button_name) {
+		$this->button_name = $button_name;
 		add_action( 'admin_init', array( $this, 'action_admin_init' ) );
 	}
 	
@@ -27,15 +29,16 @@ class InsertDish
 	
 	function filter_mce_button( $buttons ) {
 		// add a separation before our button, here our button's id is "dish_button"
-		array_push( $buttons, '|', 'dish_button' );
+		array_push( $buttons, '|', $this->button_name.'_button' );
 		return $buttons;
 	}
 	
 	function filter_mce_plugin( $plugins ) {
 		// this plugin file will work the magic of our button
-		$plugins['dish'] = plugin_dir_url( __FILE__ ) . 'dish_plugin.js';
+		$plugins[$this->button_name] = plugin_dir_url( __FILE__ ) . $this->button_name.'_plugin.js';
 		return $plugins;
 	}
 }
 
-$insertDish = new InsertDish();
+$insertDish = new InsertButton('dish');
+$insertCourse = new InsertButton('course');

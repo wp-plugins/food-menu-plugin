@@ -8,6 +8,7 @@ div.course {margin-bottom:20px;}
 .dish h2,
 .dish h3
 {text-align:center; font-style:italic;}
+.dish{text-align:center;}
 .dish-course{font-style:italic;}
 div.course .dish-course {display:none;}
 .dish-price{text-align:center;}

@@ -51,10 +51,11 @@ function show_couse_shortcode($atts)
 						'taxonomy' => 'course',
 						'field' => 'id',
 						'terms' => $course_id,
-						'orderby', 'menu_order',
-    					'order', 'ASC',
 					)
-				)
+				),
+				'orderby' => 'menu_order',
+				'order' => 'ASC',
+				'nopaging' => true,
 			);
 			$dishes = new WP_Query( $args );
 			if(!empty($dishes->posts))

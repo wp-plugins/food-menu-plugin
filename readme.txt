@@ -4,7 +4,7 @@ Donate link:
 Tags: food menu, restaurant menu
 Requires at least: 3.1
 Tested up to: 3.1
-Stable tag: 1.3
+Stable tag: 1.4
 
 This plugin allows food menus management.
 
@@ -34,6 +34,9 @@ No screenshots available at the moment
 
 == Changelog ==
 
+= 1.4 =
+Coure shortcode button added to WYSIWYG
+
 = 1.3 =
 Plugin name changed to Food Menu Plugin
 
@@ -47,6 +50,9 @@ Shortcode button added to WYSIWYG editor
 Only version
 
 == Upgrade Notice ==
+
+= 1.4 =
+Coure shortcode button added to WYSIWYG
 
 = 1.3 =
 Plugin name changed to Food Menu Plugin
